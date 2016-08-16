@@ -12,3 +12,4 @@ pyasn1==0.1.9
 pycparser==2.14
 requests==2.10.0
 six==1.10.0
+whitenoise==3.2.1
