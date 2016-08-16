@@ -1,0 +1,19 @@
+{% extends "polls/header.html" %}
+
+{% block content %}
+
+	<h1 id="pollsTitle">Most Voted POLLS</h1>
+			<div id="polls">
+				{% if most_voted_polls %}
+					{% for x in most_voted_polls %}
+						<a href="#{{forloop.counter}}" data-toggle="collapse" class="btn btn-default btn-lg btn-block question">{{ x.0 }}</a>
+							<div id="{{ forloop.counter }}" class="collapse">
+								<div class="votes">Total Votes: {{ x.1 }}</div>
+							</div>
+					{% endfor %}
+				{% else %}
+					<p>No polls are available.</p>
+				{% endif %}
+			</div>
+
+{% endblock %}

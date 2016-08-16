@@ -1,0 +1,14 @@
+beautifulsoup4==4.4.1
+cffi==1.7.0
+cryptography==1.4
+Django==1.9.7
+gunicorn==19.6.0
+idna==2.1
+image==1.5.3
+paramiko==2.0.1
+Pillow==3.2.0
+psycopg2==2.6.2
+pyasn1==0.1.9
+pycparser==2.14
+requests==2.10.0
+six==1.10.0

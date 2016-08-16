@@ -1,0 +1,13 @@
+{% extends "polls/header.html" %}
+
+{% block content %}
+
+	<h1 id="indexTitle">Menu</h1>
+		<div id="polls" class="menuOptions"">
+			<div class="list-group">
+				<a href="{% url 'polls:pollForm' %}" class="list-group-item">Create a Poll</a>
+				<a href="{% url 'polls:mostVoted' %}" class="list-group-item">Most Voted Polls</a>
+				<a href="{% url 'polls:lastPolls' %}" class="list-group-item">Latest Polls</a>
+			</div>
+		</div>
+{% endblock %}

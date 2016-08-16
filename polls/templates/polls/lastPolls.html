@@ -1,0 +1,23 @@
+{% extends "polls/header.html" %}
+
+{% block content %}
+
+	<h1 id="lastPollsTitle">Last 5 POLLS</h1>
+<!-- 		<h2 id="questions">Last 5 Polls</h2> -->
+			<div id="polls">
+				{% if latest_question_list %}
+					{% for question in latest_question_list %}
+						<a href="#{{forloop.counter}}" data-toggle="collapse" class="btn btn-default btn-lg btn-block question">{{ question.question_text }}</a>
+							<div id="{{ forloop.counter }}" class="collapse" style="margin-bottom:4%;">
+							{% for choice in question.choice_set.all %}
+								<div class="choice">{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</div>
+							{% endfor %}
+							<a href="{% url 'polls:detail' question.id %}" class="voteLink">Go to Voting Page</a>
+							</div>
+					{% endfor %}
+				{% else %}
+					<p>No polls are available.</p>
+				{% endif %}
+			</div>
+
+{% endblock %}

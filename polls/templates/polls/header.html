@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Polls</title>
+	<meta charset="utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type='text/css' />
+	<link rel="stylesheet" href="{% static 'css/general.css' %}" type='text/css' />
+	<script src="{% static 'js/angular/angular.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- 	<script src="{% static 'js/general.js' %}"></script> -->
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	   {% include 'polls/includes/navBar.html' %}
+	<div>
+	   {% block content %}
+
+	   {% endblock %}	
+	</div>
+</body>
+
+</html>

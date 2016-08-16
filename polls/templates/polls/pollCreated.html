@@ -1,0 +1,11 @@
+{% extends "polls/header.html" %}
+
+{% block content %}
+
+	<h1 id="successTitle">The poll has been created!</h1>
+
+			<div id="polls">
+				<a href="{% url 'polls:detail' question.id %}" class="btn btn-default btn-lg btn-block question">{{ question.question_text }}</a>
+			</div>
+
+{% endblock %}
