@@ -18,7 +18,7 @@ from django.views.generic.base import RedirectView
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(url='/home/')),
+    url(r'^$', RedirectView.as_view(url='/polls/')),
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
 ]
